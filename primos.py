@@ -1,9 +1,12 @@
 # Crivo de Eratóstenes
 import os
+from time import time
 
 os.system("clear") or None  # limpa console
 
 num_maximo = int(input("Mostrar os números primos de 1 até: "))
+
+inicio = time()
 
 valor_limite = int(num_maximo**0.5)
 
@@ -20,5 +23,8 @@ while True:
 
 primos += lista
 
+fim = time()
+
 print(f"\nNúmeros primos até {num_maximo}:\n\n{primos}")
 print(f"\nQuantidade de números primos até {num_maximo}: {len(primos)}")
+print(f"\nTempo gasto: {fim - inicio}")
